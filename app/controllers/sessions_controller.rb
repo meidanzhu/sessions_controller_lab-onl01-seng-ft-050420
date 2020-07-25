@@ -6,13 +6,13 @@ class SessionsController < ApplicationController
     if params[:name] && !params[:name].empty?
       session[:name] = params[:name]
       redirect_to '/'
-    else 
+    else
       redirect_to '/login'
-    end 
+    end
   end
 
   def destroy
-    session.delete :name 
+    session.delete :name
   end
   
 end
